@@ -1,0 +1,211 @@
+// Font
+$DMsans: 'DM Sans', sans-serif;
+
+// Colors
+$primary: #6D55FC;
+$accent: #ff006f;
+$footer: #FDFCF9;
+// Gradient Background
+
+body {
+    font-family: $DMsans;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+// Nav Mobile First
+.nav-layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+.nav-title {
+    display: none;
+    font-weight: bold;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 15px 10px 15px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.178);
+    border-radius: 5px;
+}
+
+// Tablet Breakpoint
+@media (min-width: 740px) {
+    .nav-title {
+        display: block;
+        margin-left: 1em;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+}
+
+// Background
+.bg-main {
+    background: rgb(235,221,245);
+    background: linear-gradient(144deg, rgba(235,221,245,1) 0%, rgba(254,251,251,1) 35%);
+}
+
+.main-wrap {
+    padding: 1em 0 3em 0;
+}
+
+// Sign Text Mobile First
+.sign-title {
+    font-size: 2.2rem;
+}
+
+.sign-p {
+    margin: 1em 0;
+    font-size: 1.1rem;
+}
+
+// Form Mobile First
+input, textarea, select {
+    font-family: inherit;
+}
+.form-white {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2em 0 0 0;
+}
+
+.form-container {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+.form-title {
+    font-size: 1.6rem;
+}
+
+.input-item {
+    margin: 2em 0;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: .5em;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1em 0 1em 1em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+    font-size: 1.2rem;
+}
+
+.form-input:focus {
+    outline: 3px solid $accent;
+}
+
+.checkbox-flex {
+    display: flex;
+}
+
+.checkbox-remove {
+    display: none;
+}
+
+.checkbox-label {
+    width: -moz-max-content;
+    width: fit-content;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.custom-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    width: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+    border-radius: 5px;
+    transition: 500ms;
+}
+
+.custom-checkbox::after {
+    content: '\2713';
+    color: #fff;
+    font-size: .75rem;
+}
+
+.checkbox-remove:checked + .custom-checkbox {
+    background-color: $accent
+}
+
+.terms-text {
+    display: inline-block;
+    font-size: 1.1rem;
+    margin-left: .5em;
+}
+
+.terms-link {
+    font-weight: bold;
+    color: $primary;
+    transition: 1s;
+}
+
+.terms-link:hover {
+    color: $accent;
+}
+
+.purple-btn {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    background-color: $primary;
+    color: #fff;
+    width: 100%;
+    padding: 1em 2em;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: $DMsans;
+    font-weight: bold;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.purple-btn:hover {
+    background-color: $accent;
+}
+
+// 1100px Breakpoint
+@media (min-width: 1100px) {
+    .main-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-white {
+        margin: 0 0 0 4em;
+    }
+
+    .form-wrap {
+        max-width: 50%;
+    }
+
+    .sign-text-wrap {
+        margin: 7em 0 0 0;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: 20px;
+    }
+}
